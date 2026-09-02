@@ -50,13 +50,13 @@ export function CountdownTimer() {
   ];
 
   return (
-    <section className="bg-[#febf1b] py-10">
-      <div className="mx-auto flex max-w-[1140px] flex-col items-center gap-5 px-4 text-center sm:flex-row sm:justify-between sm:text-left">
+    <section className="border-y border-[#febf1b]/20 bg-[#0a0a0a] py-10">
+      <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-5 px-6 text-center lg:px-10 sm:flex-row sm:justify-between sm:text-left">
         <div>
-          <p className="text-sm font-bold uppercase tracking-wide text-[#0a0a0a]/70">
+          <p className="text-sm font-bold uppercase tracking-wide text-[#febf1b]">
             ₹499 price ends today
           </p>
-          <p className="mt-1 text-2xl font-semibold text-[#0a0a0a]">
+          <p className="mt-1 text-2xl font-semibold text-white">
             Offer resets every day at 2 PM
           </p>
         </div>
@@ -64,12 +64,12 @@ export function CountdownTimer() {
           {units.map((unit) => (
             <div
               key={unit.label}
-              className="flex w-[76px] flex-col items-center rounded-2xl bg-[#0a0a0a] py-3"
+              className="flex w-[76px] flex-col items-center rounded-2xl border border-[#febf1b]/30 bg-[#febf1b]/10 py-3"
             >
-              <span className="text-2xl font-bold text-white tabular-nums">
+              <span className="text-2xl font-bold text-[#febf1b] tabular-nums">
                 {pad(unit.value)}
               </span>
-              <span className="text-xs font-medium text-white/60">
+              <span className="text-xs font-medium text-white/50">
                 {unit.label}
               </span>
             </div>

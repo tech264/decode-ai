@@ -34,8 +34,8 @@ function Avatar({ name }: { name: string }) {
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="bg-[#0a0a0a] py-16 md:py-20">
-      <div className="mx-auto max-w-[1140px] px-4">
+    <section id="testimonials" className="bg-[#0a0a0a] py-16 md:py-24">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <h2 className="text-center text-3xl font-semibold text-white md:text-4xl">
           Testimonials
         </h2>
@@ -44,7 +44,7 @@ export function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="flex flex-col rounded-2xl bg-[#161616] p-6"
+              className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6"
             >
               <Quote className="h-7 w-7 shrink-0 fill-[#e0483e] text-[#e0483e]" />
               <p className="mt-4 flex-1 text-white/80">{t.text}</p>

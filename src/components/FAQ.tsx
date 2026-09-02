@@ -67,9 +67,9 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-[#f5f5f5] py-16 md:py-20">
-      <div className="mx-auto max-w-[860px] px-4">
-        <h2 className="text-center text-3xl font-semibold text-[#0a0a0a] md:text-4xl">
+    <section id="faq" className="bg-[#0a0a0a] py-16 md:py-24">
+      <div className="mx-auto max-w-[900px] px-6">
+        <h2 className="text-center text-3xl font-bold text-white md:text-4xl">
           Frequently Asked Questions
         </h2>
 
@@ -79,19 +79,22 @@ export function FAQ() {
             return (
               <div
                 key={faq.question}
-                className="overflow-hidden rounded-2xl border border-black/10 bg-white"
+                className={cn(
+                  "overflow-hidden rounded-2xl border bg-white/[0.03] transition-colors",
+                  isOpen ? "border-[#febf1b]/30" : "border-white/10"
+                )}
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left md:px-6 md:py-5"
                 >
-                  <span className="text-lg font-semibold text-[#0a0a0a]">
+                  <span className="text-lg font-semibold text-white">
                     {faq.question}
                   </span>
                   <ChevronDown
                     className={cn(
-                      "h-5 w-5 shrink-0 text-[#4b4f58] transition-transform duration-200",
+                      "h-5 w-5 shrink-0 text-white/50 transition-transform duration-200",
                       isOpen && "rotate-180"
                     )}
                   />
@@ -106,7 +109,7 @@ export function FAQ() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <p className="border-t border-black/5 px-5 py-4 text-[#4b4f58] md:px-6">
+                    <p className="border-t border-white/5 px-5 py-4 text-white/60 md:px-6">
                       {faq.answer}
                     </p>
                   </div>

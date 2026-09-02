@@ -23,13 +23,13 @@ const CARDS = [
 
 export function WhyThisCourse() {
   return (
-    <section className="bg-[#f5f5f5] py-16 md:py-20">
-      <div className="mx-auto max-w-[1140px] px-4">
+    <section className="bg-[#0a0a0a] py-16 md:py-24">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="grid gap-6 md:grid-cols-3">
           {CARDS.map((card) => (
             <div
               key={card.heading}
-              className="overflow-hidden rounded-2xl bg-white"
+              className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-colors hover:border-[#febf1b]/30"
             >
               <Image
                 src={card.image}
@@ -39,10 +39,10 @@ export function WhyThisCourse() {
                 className="aspect-square w-full object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#0a0a0a]">
+                <h3 className="text-xl font-semibold text-white">
                   {card.heading}
                 </h3>
-                <p className="mt-2 text-[#4b4f58]">{card.description}</p>
+                <p className="mt-2 text-white/60">{card.description}</p>
               </div>
             </div>
           ))}

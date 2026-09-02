@@ -2,8 +2,8 @@ import { ArrowCircleRightIcon } from "@/components/icons";
 
 export function EnrollCta() {
   return (
-    <section id="enroll" className="bg-be10x-grid bg-[#0a0a0a] py-16 text-white md:py-20">
-      <div className="mx-auto max-w-[640px] px-4 text-center">
+    <section id="enroll" className="bg-be10x-grid bg-[#0a0a0a] py-20 text-white md:py-28">
+      <div className="mx-auto max-w-[640px] px-6 text-center">
         <h2 className="text-3xl font-semibold md:text-4xl">
           Ready to Decode AI?
         </h2>

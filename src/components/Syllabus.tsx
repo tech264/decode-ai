@@ -100,13 +100,13 @@ export function Syllabus() {
   const [openIndex, setOpenIndex] = useState<number | null>(1);
 
   return (
-    <section id="syllabus" className="bg-[#f5f5f5] py-16 md:py-20">
-      <div className="mx-auto max-w-[860px] px-4">
+    <section id="syllabus" className="bg-[#0a0a0a] py-16 md:py-24">
+      <div className="mx-auto max-w-[900px] px-6">
         <div className="text-center">
-          <h2 className="text-3xl font-semibold text-[#0a0a0a] md:text-4xl">
+          <h2 className="text-3xl font-bold text-white md:text-4xl">
             Course Syllabus
           </h2>
-          <p className="mt-3 text-lg text-[#4b4f58]">
+          <p className="mt-3 text-lg text-white/50">
             7 modules · {TOTAL_LESSONS} lessons · 4 hours total
           </p>
         </div>
@@ -118,7 +118,10 @@ export function Syllabus() {
             return (
               <div
                 key={module.title}
-                className="overflow-hidden rounded-2xl border border-black/10 bg-white"
+                className={cn(
+                  "overflow-hidden rounded-2xl border bg-white/[0.03] transition-colors",
+                  isOpen ? "border-[#febf1b]/30" : "border-white/10"
+                )}
               >
                 <button
                   type="button"
@@ -127,21 +130,21 @@ export function Syllabus() {
                 >
                   <span className="flex items-center gap-3">
                     {isModule && (
-                      <span className="shrink-0 rounded-full bg-[#febf1b]/15 px-2.5 py-1 text-xs font-bold text-[#a97b00]">
+                      <span className="shrink-0 rounded-full bg-[#febf1b]/15 px-2.5 py-1 text-xs font-bold text-[#febf1b]">
                         MODULE {index}
                       </span>
                     )}
-                    <span className="text-lg font-semibold text-[#0a0a0a]">
+                    <span className="text-lg font-semibold text-white">
                       {module.title}
                     </span>
                   </span>
                   <span className="flex shrink-0 items-center gap-3">
-                    <span className="text-sm text-[#4b4f58]">
+                    <span className="text-sm text-white/50">
                       {module.lessons.length} lessons
                     </span>
                     <ChevronDown
                       className={cn(
-                        "h-5 w-5 text-[#4b4f58] transition-transform duration-200",
+                        "h-5 w-5 text-white/50 transition-transform duration-200",
                         isOpen && "rotate-180"
                       )}
                     />
@@ -157,11 +160,11 @@ export function Syllabus() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <ul className="border-t border-black/5 px-5 pb-3 md:px-6">
+                    <ul className="border-t border-white/5 px-5 pb-3 md:px-6">
                       {module.lessons.map((lesson) => (
                         <li
                           key={lesson}
-                          className="flex items-center gap-3 py-3 text-[#0a0a0a]"
+                          className="flex items-center gap-3 py-3 text-white/80"
                         >
                           <PlayCircle className="h-[18px] w-[18px] shrink-0 text-[#febf1b]" />
                           <span>{lesson}</span>

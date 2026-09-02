@@ -33,7 +33,7 @@ const SOCIAL_ICONS = [
 export function SiteFooter() {
   return (
     <footer className={cn("w-full bg-white py-8 md:py-12")}>
-      <div className="mx-auto flex max-w-6xl flex-col items-center px-4">
+      <div className="mx-auto flex max-w-[1400px] flex-col items-center px-6 lg:px-10">
         <nav
           aria-label="Footer"
           className="flex flex-wrap justify-center gap-x-5 gap-y-2"

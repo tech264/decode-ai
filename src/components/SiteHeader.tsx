@@ -19,7 +19,7 @@ export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex h-[93px] items-center justify-between border-b border-black/5 bg-white px-4 shadow-sm sm:px-6 lg:px-10">
+    <header className="fixed top-0 left-0 right-0 z-50 flex h-[93px] items-center justify-between bg-[#0a0a0a] px-4 sm:px-6 lg:px-10">
       {/* Logo */}
       <a href="#" className="shrink-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -36,7 +36,7 @@ export function SiteHeader() {
           <a
             key={link.label}
             href={link.href}
-            className="text-lg font-normal text-[#0a0a0a]"
+            className="text-lg font-normal text-white"
           >
             {link.label}
           </a>
@@ -57,7 +57,7 @@ export function SiteHeader() {
           type="button"
           aria-label="Open menu"
           onClick={() => setIsMenuOpen(true)}
-          className="text-[#0a0a0a] lg:hidden"
+          className="text-white lg:hidden"
         >
           <Menu className="h-7 w-7" />
         </button>
@@ -73,7 +73,7 @@ export function SiteHeader() {
       >
         <div
           className={cn(
-            "fixed right-0 top-0 h-full w-4/5 max-w-sm bg-white transition-transform duration-300",
+            "fixed right-0 top-0 h-full w-4/5 max-w-sm bg-[#0a0a0a] transition-transform duration-300",
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
           onClick={(e) => e.stopPropagation()}
@@ -89,7 +89,7 @@ export function SiteHeader() {
               type="button"
               aria-label="Close menu"
               onClick={() => setIsMenuOpen(false)}
-              className="text-[#0a0a0a]"
+              className="text-white"
             >
               <X className="h-7 w-7" />
             </button>
@@ -101,7 +101,7 @@ export function SiteHeader() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="border-b border-black/10 py-3 text-lg font-normal text-[#0a0a0a]"
+                className="border-b border-white/10 py-3 text-lg font-normal text-white"
               >
                 {link.label}
               </a>

@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/HeroSection";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { InstructorSection } from "@/components/InstructorSection";
+import { WhyThisCourse } from "@/components/WhyThisCourse";
 import { Syllabus } from "@/components/Syllabus";
 import { AboutUs } from "@/components/AboutUs";
 import { Testimonials } from "@/components/Testimonials";
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <WhyChooseUs />
       <InstructorSection />
+      <WhyThisCourse />
       <Syllabus />
       <AboutUs />
       <Testimonials />

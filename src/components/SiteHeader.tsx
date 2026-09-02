@@ -26,9 +26,9 @@ export function SiteHeader() {
         <a href="#" className="shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/dr-expert/logo.png"
+            src="/images/dr-expert/logo-mark.png"
             alt="Dr. Expert Academy"
-            className="h-12 w-auto"
+            className="h-11 w-auto"
           />
         </a>
 
@@ -86,9 +86,9 @@ export function SiteHeader() {
           <div className="flex items-center justify-between px-6 py-6">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/dr-expert/logo.png"
+              src="/images/dr-expert/logo-mark.png"
               alt="Dr. Expert Academy"
-              className="h-10 w-auto"
+              className="h-9 w-auto"
             />
             <button
               type="button"

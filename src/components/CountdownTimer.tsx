@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ArrowCircleRightIcon } from "@/components/icons";
+import { CHECKOUT_URL } from "@/lib/constants";
 
 function getNextDeadline(): Date {
   const now = new Date();
@@ -78,7 +79,9 @@ export function CountdownTimer() {
             ))}
           </div>
           <a
-            href="#enroll"
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#febf1b] px-6 py-3.5 text-base font-semibold text-[#0a0a0a] transition-transform hover:scale-[1.02]"
           >
             Enroll Now

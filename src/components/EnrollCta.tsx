@@ -1,4 +1,5 @@
 import { ArrowCircleRightIcon } from "@/components/icons";
+import { CHECKOUT_URL } from "@/lib/constants";
 
 export function EnrollCta() {
   return (
@@ -13,7 +14,9 @@ export function EnrollCta() {
         </p>
         <div className="mt-8 flex flex-col items-center gap-3">
           <a
-            href="#"
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-[#febf1b] px-8 py-4 text-lg font-semibold text-[#0a0a0a] transition-transform hover:scale-[1.02]"
           >
             Enroll Now for ₹499

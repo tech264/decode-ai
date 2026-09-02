@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowCircleRightIcon } from "@/components/icons";
+import { CHECKOUT_URL } from "@/lib/constants";
 
 const HIGHLIGHTS = [
   "Claude, ChatGPT & modern AI tools",
@@ -40,7 +41,9 @@ export function HeroSection() {
             </ul>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
-                href="#enroll"
+                href={CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#febf1b] px-8 py-4 text-lg font-semibold text-[#0a0a0a] shadow-[0_0_40px_-8px_rgba(254,191,27,0.6)] transition-transform hover:scale-[1.02]"
               >
                 Enroll Now for ₹499

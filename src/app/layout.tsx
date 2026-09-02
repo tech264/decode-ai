@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Website Clone",
-  description: "Pixel-perfect website clone",
+  title: "Be10X - Become 10X Version Of Yourself",
+  description:
+    "Discover industry-leading IT professional courses and workshops, Generative AI courses, Microsoft Office courses, and Power BI Workshops all designed for your career growth.",
+  icons: {
+    icon: [
+      { url: "/seo/favicon-32.png", sizes: "32x32" },
+      { url: "/seo/favicon-192.png", sizes: "192x192" },
+    ],
+    apple: "/seo/favicon-192.png",
+  },
 };
 
 export default function RootLayout({
@@ -23,10 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${poppins.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

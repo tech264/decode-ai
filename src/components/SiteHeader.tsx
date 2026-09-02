@@ -19,48 +19,50 @@ export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex h-[93px] items-center justify-between bg-[#0a0a0a] px-4 sm:px-6 lg:px-10">
-      {/* Logo */}
-      <a href="#" className="shrink-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/dr-expert/logo.png"
-          alt="Dr. Expert Academy"
-          className="h-12 w-auto"
-        />
-      </a>
-
-      {/* Desktop nav */}
-      <nav className="hidden items-center gap-8 lg:flex">
-        {NAV_LINKS.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            className="text-lg font-normal text-white"
-          >
-            {link.label}
-          </a>
-        ))}
-      </nav>
-
-      {/* Right side */}
-      <div className="flex items-center gap-4">
-        <a
-          href="#enroll"
-          className="hidden rounded-full bg-[#febf1b] px-5 py-3 text-[15px] font-semibold text-[#0a0a0a] lg:inline-block"
-        >
-          Enroll for ₹499
+    <header className="fixed top-0 left-0 right-0 z-50 flex h-[93px] items-center bg-[#0a0a0a] px-4">
+      <div className="mx-auto flex w-full max-w-[1140px] items-center justify-between">
+        {/* Logo */}
+        <a href="#" className="shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/dr-expert/logo.png"
+            alt="Dr. Expert Academy"
+            className="h-12 w-auto"
+          />
         </a>
 
-        {/* Hamburger */}
-        <button
-          type="button"
-          aria-label="Open menu"
-          onClick={() => setIsMenuOpen(true)}
-          className="text-white lg:hidden"
-        >
-          <Menu className="h-7 w-7" />
-        </button>
+        {/* Desktop nav */}
+        <nav className="hidden items-center gap-8 lg:flex">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-lg font-normal text-white"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        {/* Right side */}
+        <div className="flex items-center gap-4">
+          <a
+            href="#enroll"
+            className="hidden rounded-full bg-[#febf1b] px-5 py-3 text-[15px] font-semibold text-[#0a0a0a] lg:inline-block"
+          >
+            Enroll for ₹499
+          </a>
+
+          {/* Hamburger */}
+          <button
+            type="button"
+            aria-label="Open menu"
+            onClick={() => setIsMenuOpen(true)}
+            className="text-white lg:hidden"
+          >
+            <Menu className="h-7 w-7" />
+          </button>
+        </div>
       </div>
 
       {/* Mobile drawer */}

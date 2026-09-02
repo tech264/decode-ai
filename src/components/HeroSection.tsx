@@ -9,9 +9,9 @@ const HIGHLIGHTS = [
 
 export function HeroSection() {
   return (
-    <section className="bg-be10x-grid bg-[#0a0a0a] text-white">
-      <div className="mx-auto max-w-[1140px] px-4 pt-24 pb-8 md:pt-[104px] md:pb-10">
-        <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
+    <section className="bg-be10x-grid flex min-h-screen flex-col bg-[#0a0a0a] pt-[93px] text-white">
+      <div className="mx-auto flex w-full max-w-[1140px] flex-1 items-center px-4 py-10">
+        <div className="w-full lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
           {/* Left: copy */}
           <div>
             <span className="inline-block rounded-full bg-[#febf1b]/10 px-4 py-1.5 text-sm font-semibold text-[#febf1b]">

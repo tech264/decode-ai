@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SectionCta } from "@/components/SectionCta";
 
 const METRICS = [
   { value: "5+", label: "Years in Tech" },
@@ -56,6 +57,8 @@ export function InstructorSection() {
             </div>
           </div>
         </div>
+
+        <SectionCta text="Learn directly from a practitioner who's shipped AI products for 100+ companies." />
       </div>
     </section>
   );

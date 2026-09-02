@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SectionCta } from "@/components/SectionCta";
 
 interface FaqItem {
   question: string;
@@ -118,6 +119,8 @@ export function FAQ() {
             );
           })}
         </div>
+
+        <SectionCta text="Still deciding? Try Decode AI risk-free for less than the price of a pizza." />
       </div>
     </section>
   );

@@ -19,7 +19,7 @@ export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex h-[93px] items-center border-b border-white/5 bg-[#0a0a0a] px-6 lg:px-10">
+    <header className="fixed top-0 left-0 right-0 z-50 flex h-[93px] items-center bg-transparent px-6 backdrop-blur-sm lg:px-10">
       <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between">
         {/* Logo */}
         <a href="#" className="shrink-0">

@@ -1,4 +1,5 @@
 import { Quote, Star } from "lucide-react";
+import { SectionCta } from "@/components/SectionCta";
 
 interface Testimonial {
   name: string;
@@ -69,6 +70,8 @@ export function Testimonials() {
             </div>
           ))}
         </div>
+
+        <SectionCta text="Join learners who are already putting AI to work in their everyday jobs." />
       </div>
     </section>
   );

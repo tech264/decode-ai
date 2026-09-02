@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SectionCta } from "@/components/SectionCta";
 
 const CARDS = [
   {
@@ -47,6 +48,8 @@ export function WhyThisCourse() {
             </div>
           ))}
         </div>
+
+        <SectionCta text="This is exactly what you'll walk away knowing how to do." />
       </div>
     </section>
   );

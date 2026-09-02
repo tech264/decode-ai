@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown, PlayCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SectionCta } from "@/components/SectionCta";
 
 interface Module {
   title: string;
@@ -177,6 +178,8 @@ export function Syllabus() {
             );
           })}
         </div>
+
+        <SectionCta text="Get instant access to all 7 modules and 47 lessons." />
       </div>
     </section>
   );

@@ -1,9 +1,23 @@
+import { HeroSection } from "@/components/HeroSection";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { OurWorkshops } from "@/components/OurWorkshops";
+import { ResourceCarousel } from "@/components/ResourceCarousel";
+import { AboutUs } from "@/components/AboutUs";
+import { LogoStrip } from "@/components/LogoStrip";
+import { VideoTestimonials } from "@/components/VideoTestimonials";
+import { YoutubeShowcase } from "@/components/YoutubeShowcase";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <p className="text-muted-foreground">
-        Clone target not yet built. Run <code className="font-mono text-foreground">/clone-website</code> to start.
-      </p>
-    </main>
+    <>
+      <HeroSection />
+      <WhyChooseUs />
+      <OurWorkshops />
+      <ResourceCarousel />
+      <AboutUs />
+      <LogoStrip />
+      <VideoTestimonials />
+      <YoutubeShowcase />
+    </>
   );
 }

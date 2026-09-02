@@ -13,20 +13,18 @@ export function AboutUs() {
             <div className="relative border-2 border-black p-4">
               <div className="space-y-4">
                 <p className="text-base text-black">
-                  <strong className="font-bold">Be10X</strong> is a leading
-                  ed-tech platform that helps working professionals upskill,
-                  boost productivity, and achieve their career goals with the
-                  help of IT Professional Courses.
+                  <strong className="font-bold">Dr. Expert Academy</strong> builds
+                  hands-on, practitioner-led courses that help professionals
+                  put AI to work — not just learn the theory behind it.
                 </p>
                 <p className="text-base text-black">
-                  Gain knowledge and enhance your skills in various subjects
-                  such as AI Tools courses, Excel using AI courses, Power BI
-                  courses, Generative AI courses, and more.
+                  Decode AI covers the exact tools and workflows used daily:
+                  Claude, prompt engineering, AI-built websites, NotebookLM
+                  research, AI presentations, and Google Workspace AI.
                 </p>
                 <p className="text-base text-black">
-                  These workshops will make you industry-ready, earn money
-                  with Artificial Intelligence, and help you grow
-                  exponentially in your career.
+                  No prior technical knowledge required — just 4 focused
+                  hours to a genuinely useful AI skill set.
                 </p>
               </div>
 
@@ -34,22 +32,22 @@ export function AboutUs() {
                 Join us
               </h3>
               <p className="mt-4 text-base text-black">
-                As we pave your way to the AI journey!
+                Seats are limited for every cohort of Decode AI.
               </p>
 
               <a
-                href="#"
+                href="#enroll"
                 className={cn(
                   "mt-6 inline-block border-2 border-black bg-white px-8 py-4 text-base text-black",
                   "transition-colors hover:bg-black hover:text-white"
                 )}
               >
-                Learn More
+                Enroll Now
               </a>
 
               <div
                 aria-hidden="true"
-                className="absolute -right-2 top-0 h-full w-2 bg-[#17A4F4]"
+                className="absolute -right-2 top-0 h-full w-2 bg-[#febf1b]"
               />
             </div>
           </div>

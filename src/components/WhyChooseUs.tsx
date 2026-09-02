@@ -1,9 +1,9 @@
 import { Check } from "lucide-react"
 
 const CHECKLIST_ITEMS = [
-  "100k+ Professionals Enrolled in our Workshops",
-  "Learn from IIT Kharagpur Alumni",
-  "Get Workshop Participation Certificate",
+  "7 modules, 47 lessons, built around real workflows",
+  "Taught by an AI practitioner, not a theorist",
+  "Certificate of completion included",
 ] as const
 
 export function WhyChooseUs() {
@@ -16,13 +16,13 @@ export function WhyChooseUs() {
 
         <div className="mt-6 flex max-w-[900px] flex-col gap-4">
           <p className="text-base text-black">
-            Be10X is among top-rated ed-tech companies providing Online
-            Workshops with Certificates to the working professionals.
+            Dr. Expert Academy built Decode AI for people who want to
+            actually use AI at work — not just read about it.
           </p>
           <p className="text-base text-black">
-            Starting from Artificial Intelligence Online Courses for
-            beginners, we have expanded our array to MS Excel Workshops,
-            Power BI workshops, and MS PowerPoint Workshops.
+            In 4 focused hours you&apos;ll go from prompt basics to building
+            websites, running research, and shipping presentations with AI —
+            all hands-on, no fluff.
           </p>
         </div>
 

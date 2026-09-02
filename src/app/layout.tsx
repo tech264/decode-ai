@@ -11,15 +11,15 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Be10X - Become 10X Version Of Yourself",
+  title: "Decode AI - Dr. Expert Academy",
   description:
-    "Discover industry-leading IT professional courses and workshops, Generative AI courses, Microsoft Office courses, and Power BI Workshops all designed for your career growth.",
+    "Master Claude, ChatGPT, and modern AI tools in one 4-hour course. Prompt engineering, AI-built websites, NotebookLM research, presentations, and Google Workspace AI workflows.",
   icons: {
     icon: [
       { url: "/seo/favicon-32.png", sizes: "32x32" },
       { url: "/seo/favicon-192.png", sizes: "192x192" },
     ],
-    apple: "/seo/favicon-192.png",
+    apple: "/seo/apple-touch-icon.png",
   },
 };
 

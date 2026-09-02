@@ -14,19 +14,12 @@ interface FooterLink {
 }
 
 const FOOTER_LINKS: FooterLink[] = [
-  { label: "About Us", href: "https://be10x.in/about-us/" },
-  { label: "Contact Us", href: "https://be10x.in/contact-us/" },
-  { label: "Teach with Us", href: "https://forms.gle/hsuyDJ2FM3PT2mwi6" },
-  { label: "Grow With Us", href: "https://be10x.com/grow-with-us/" },
-  {
-    label: "Cancellation/Refund Policy",
-    href: "https://be10x.in/refund-policy/",
-  },
-  { label: "Privacy Policy", href: "https://be10x.in/privacy-policy/" },
-  { label: "Terms of use", href: "https://be10x.in/terms-of-use/" },
-  { label: "Guest Posting", href: "https://be10x.in/guest-posting/" },
-  { label: "Reviews", href: "https://be10x.com/reviews/" },
-  { label: "Trust and Safety", href: "https://be10x.com/trust-and-safety/" },
+  { label: "Syllabus", href: "#syllabus" },
+  { label: "Instructor", href: "#instructor" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Cancellation/Refund Policy", href: "#" },
+  { label: "Privacy Policy", href: "#" },
+  { label: "Terms of use", href: "#" },
 ]
 
 const SOCIAL_ICONS = [
@@ -49,8 +42,6 @@ export function SiteFooter() {
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
               className="text-sm text-black md:text-base"
             >
               {link.label}
@@ -72,7 +63,7 @@ export function SiteFooter() {
         </div>
 
         <p className="mt-6 text-center text-sm text-gray-500">
-          Copyright © 2026 Be10x. All right reserved
+          Copyright © 2026 Dr. Expert Academy. All rights reserved
         </p>
       </div>
     </footer>

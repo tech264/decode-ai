@@ -1,23 +1,21 @@
 import { HeroSection } from "@/components/HeroSection";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
-import { OurWorkshops } from "@/components/OurWorkshops";
-import { ResourceCarousel } from "@/components/ResourceCarousel";
+import { InstructorSection } from "@/components/InstructorSection";
+import { Syllabus } from "@/components/Syllabus";
 import { AboutUs } from "@/components/AboutUs";
-import { LogoStrip } from "@/components/LogoStrip";
-import { VideoTestimonials } from "@/components/VideoTestimonials";
-import { YoutubeShowcase } from "@/components/YoutubeShowcase";
+import { Testimonials } from "@/components/Testimonials";
+import { EnrollCta } from "@/components/EnrollCta";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <WhyChooseUs />
-      <OurWorkshops />
-      <ResourceCarousel />
+      <InstructorSection />
+      <Syllabus />
       <AboutUs />
-      <LogoStrip />
-      <VideoTestimonials />
-      <YoutubeShowcase />
+      <Testimonials />
+      <EnrollCta />
     </>
   );
 }

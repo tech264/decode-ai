@@ -1,4 +1,7 @@
+"use client";
+
 import { ArrowCircleRightIcon } from "@/components/icons";
+import { trackInitiateCheckout } from "@/lib/analytics";
 import { CHECKOUT_URL } from "@/lib/constants";
 
 export function EnrollCta() {
@@ -17,6 +20,7 @@ export function EnrollCta() {
             href={CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackInitiateCheckout}
             className="inline-flex items-center gap-2 rounded-full bg-[#febf1b] px-8 py-4 text-lg font-semibold text-[#0a0a0a] transition-transform hover:scale-[1.02]"
           >
             Enroll Now for ₹499

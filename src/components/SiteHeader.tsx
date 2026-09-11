@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { trackInitiateCheckout } from "@/lib/analytics";
 import { CHECKOUT_URL } from "@/lib/constants";
 
 interface NavLink {
@@ -51,6 +52,7 @@ export function SiteHeader() {
             href={CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackInitiateCheckout}
             className="hidden rounded-full bg-[#febf1b] px-5 py-3 text-[15px] font-semibold text-[#0a0a0a] lg:inline-block"
           >
             Enroll for ₹499
@@ -116,7 +118,10 @@ export function SiteHeader() {
               href={CHECKOUT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => {
+                trackInitiateCheckout();
+                setIsMenuOpen(false);
+              }}
               className="mt-6 inline-block w-fit rounded-full bg-[#febf1b] px-5 py-3 text-[15px] font-semibold text-[#0a0a0a]"
             >
               Enroll for ₹499

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ArrowCircleRightIcon } from "@/components/icons";
+import { trackInitiateCheckout } from "@/lib/analytics";
 import { CHECKOUT_URL } from "@/lib/constants";
 
 function getNextDeadline(): Date {
@@ -27,23 +28,31 @@ function pad(n: number) {
 }
 
 export function CountdownTimer() {
-  const [deadline, setDeadline] = useState(getNextDeadline);
-  const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(deadline));
+  const [deadline, setDeadline] = useState<Date | null>(null);
+  const [, setTick] = useState(0);
 
   useEffect(() => {
+    setDeadline(getNextDeadline());
+  }, []);
+
+  useEffect(() => {
+    if (!deadline) return;
     const id = setInterval(() => {
-      const remaining = getTimeLeft(deadline);
-      setTimeLeft(remaining);
+      setTick((t) => t + 1);
       if (
-        remaining.hours === 0 &&
-        remaining.minutes === 0 &&
-        remaining.seconds === 0
+        getTimeLeft(deadline).hours === 0 &&
+        getTimeLeft(deadline).minutes === 0 &&
+        getTimeLeft(deadline).seconds === 0
       ) {
         setDeadline(getNextDeadline());
       }
     }, 1000);
     return () => clearInterval(id);
   }, [deadline]);
+
+  const timeLeft = deadline
+    ? getTimeLeft(deadline)
+    : { hours: 0, minutes: 0, seconds: 0 };
 
   const units = [
     { label: "Hours", value: timeLeft.hours },
@@ -82,6 +91,7 @@ export function CountdownTimer() {
             href={CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackInitiateCheckout}
             className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#febf1b] px-6 py-3.5 text-base font-semibold text-[#0a0a0a] transition-transform hover:scale-[1.02]"
           >
             Enroll Now

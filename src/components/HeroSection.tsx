@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { ArrowCircleRightIcon } from "@/components/icons";
+import { trackInitiateCheckout } from "@/lib/analytics";
 import { CHECKOUT_URL } from "@/lib/constants";
 
 const HIGHLIGHTS = [
@@ -44,6 +47,7 @@ export function HeroSection() {
                 href={CHECKOUT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackInitiateCheckout}
                 className="inline-flex items-center gap-2 rounded-full bg-[#febf1b] px-8 py-4 text-lg font-semibold text-[#0a0a0a] shadow-[0_0_40px_-8px_rgba(254,191,27,0.6)] transition-transform hover:scale-[1.02]"
               >
                 Enroll Now for ₹499
